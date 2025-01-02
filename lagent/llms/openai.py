@@ -384,7 +384,7 @@ class GPTAPI(BaseAPILLM):
 
         # Model-specific processing
         data = {}
-        if model_type.lower().startswith('gpt'):
+        if model_type.lower().startswith('gpt') or True:
             if 'top_k' in gen_params:
                 warnings.warn('`top_k` parameter is deprecated in OpenAI APIs.', DeprecationWarning)
                 gen_params.pop('top_k')
